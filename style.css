@@ -1,0 +1,77 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.container {
+    width: 100%;
+    margin: 20px auto; 
+    overflow: hidden; 
+}
+
+
+.column {
+    width: 30%;
+    margin: 0 1.5%; 
+    float: left; 
+    background-color: #f2f2f2; 
+    padding: 20px; 
+    box-sizing: border-box; 
+    position: relative; 
+}
+
+
+.column h2 {
+    background-color: blue;
+    position: absolute;
+    top: -20px;
+    right: 0;
+}
+
+
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.title{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+/* Media query for mobile view (viewport width <= 767px) */
+@media (max-width: 767px) {
+    .column {
+        width: 94%;
+        margin: 3%; 
+    }
+}
+
+
+
+
+
+/* Media query for tablet view (viewport width between 768px and 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .column {
+        width: 48%;
+        margin: 1%;
+    }
+
+
+    .column:nth-child(3) {
+        width: 98%;
+        margin: 1%; 
+    }
+}
